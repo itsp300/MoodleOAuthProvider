@@ -1,1 +1,1 @@
-oauthtest
+MoodleOAuthProvider
