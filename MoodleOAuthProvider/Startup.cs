@@ -39,8 +39,8 @@ namespace MoodleOAuthProvider
                 .AddInMemoryIdentityResources(Config.GetIdentityResources())
                 .AddInMemoryApiResources(Config.GetApis())
                 .AddInMemoryClients(Config.GetClients())
-                .AddDeveloperSigningCredential();
-            //.AddProfileService<MoodleProfileService>();
+                .AddDeveloperSigningCredential()
+                .AddProfileService<MoodleProfileService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
