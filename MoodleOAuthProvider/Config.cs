@@ -52,6 +52,16 @@ namespace MoodleOAuthProvider
                 },
                 new Client
                 {
+                    ClientName = "face_rec_server",
+                    ClientId = "ITSP300_FACE_REC_SERVER",
+                    ClientSecrets = {
+                        new Secret("ITSP300_FACE_REC_SERVER_SECRET".Sha256(), null)
+                    },
+                    AllowedGrantTypes = GrantTypes.ClientCredentials,
+                    AllowedScopes = { "backend.server" }
+                },
+                new Client
+                {
                     ClientName = "android_app",
                     ClientId = "ITSP300_ANDROID_APP",
                     AllowedGrantTypes = GrantTypes.Implicit,
