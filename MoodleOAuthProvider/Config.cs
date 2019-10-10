@@ -44,7 +44,9 @@ namespace MoodleOAuthProvider
                 {
                     ClientName = "raspberry_pi",
                     ClientId = "ITSP300_RASPBERRY_PI",
-                    ClientSecrets = { new Secret("ITSP300_RASPBERRY_PI_SECRET") },
+                    ClientSecrets = {
+                        new Secret("ITSP300_RASPBERRY_PI_SECRET".Sha256(), null)
+                    },
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     AllowedScopes = { "backend.server" }
                 },
